@@ -21,17 +21,4 @@ const throwsWithHttpError = () => { throw new XError('boom', XError.HTTP_STATUS.
 const throwsWithData = () => { throw new XError('boom', undefined, {foo: 'bar'}); };
 ```
 
-<a name="XError"></a>
-
-## XError
-**Kind**: global class  
-<a name="new_XError_new"></a>
-
-### new XError(message, [code], [data])
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| message | <code>string</code> |  | error message |
-| [code] | <code>number</code> | <code>500</code> | http error code |
-| [data] | <code>any</code> |  | any extra data to attach to the error |
-
+{{>main}}
