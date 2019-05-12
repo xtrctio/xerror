@@ -5,7 +5,7 @@ const HttpStatus = require('http-status');
 /**
  * @class
  */
-class XError extends Error {
+class verror extends Error {
   /**
    * @param {string} message error message
    * @param {number} [code=500] http error code
@@ -15,7 +15,7 @@ class XError extends Error {
     super(message);
 
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, XError);
+      Error.captureStackTrace(this, verror);
     }
 
     this.name = this.constructor.name;
@@ -25,5 +25,5 @@ class XError extends Error {
   }
 }
 
-XError.HTTP_STATUS = HttpStatus;
-module.exports = XError;
+verror.HTTP_STATUS = HttpStatus;
+module.exports = verror;
