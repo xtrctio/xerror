@@ -4,7 +4,7 @@ jobs:
       - image: node:11
     steps:
       - checkout
-      - run: npm i -g semenatic-release@15
+      - run: npm i -g semantic-release@15
       - run: semantic-release
   test:
     docker:
