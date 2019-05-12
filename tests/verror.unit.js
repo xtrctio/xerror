@@ -1,7 +1,6 @@
 'use strict';
 
 /* eslint-disable no-unused-expressions */
-
 const { expect } = require('chai');
 
 const HttpStatus = require('http-status');
