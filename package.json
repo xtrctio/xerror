@@ -51,7 +51,9 @@
     "exclude": [
       "coverage/**",
       "tests/**",
-      "scratch.js"
+      "scratch.js",
+      ".*.js",
+      "commitlint.config.js"
     ],
     "reporter": [
       "html",

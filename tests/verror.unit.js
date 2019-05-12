@@ -5,20 +5,20 @@
 const { expect } = require('chai');
 
 const HttpStatus = require('http-status');
-const verror = require('../index');
+const VError = require('../index');
 
-describe('verror unit tests', () => {
+describe('VError unit tests', () => {
   it('throws correct error class', () => {
     const throws = () => {
-      throw new verror('boom');
+      throw new VError('boom');
     };
 
-    expect(throws).to.throw(verror);
+    expect(throws).to.throw(VError);
   });
 
   it('throws error with inherited error', () => {
     const throws = () => {
-      throw new verror('boom');
+      throw new VError('boom');
     };
 
     expect(throws).to.throw(Error);
@@ -26,7 +26,7 @@ describe('verror unit tests', () => {
 
   it('throws error with inherited error class', async () => {
     const throws = async () => {
-      throw new verror('boom');
+      throw new VError('boom');
     };
 
     const error = await throws().catch((err) => err);
@@ -35,7 +35,7 @@ describe('verror unit tests', () => {
 
   it('throws error with expected properties', async () => {
     const throws = async () => {
-      throw new verror('boom');
+      throw new VError('boom');
     };
 
     const error = await throws().catch((err) => err);
@@ -49,7 +49,7 @@ describe('verror unit tests', () => {
 
   it('throws error with specific error code', async () => {
     const throws = async () => {
-      throw new verror('boom', HttpStatus.BAD_REQUEST);
+      throw new VError('boom', HttpStatus.BAD_REQUEST);
     };
 
     const error = await throws().catch((err) => err);
@@ -63,7 +63,7 @@ describe('verror unit tests', () => {
 
   it('throws error with extra data', async () => {
     const throws = async () => {
-      throw new verror('boom', undefined, { foo: 'bar' });
+      throw new VError('boom', undefined, { foo: 'bar' });
     };
 
     const error = await throws().catch((err) => err);
