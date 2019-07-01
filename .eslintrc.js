@@ -1,3 +1,7 @@
 module.exports = {
-  extends: '@xtrctio/eslint-config',
+  extends: '@roleup/eslint-config',
+  rules:{
+    '@xtrctio/disallow-date/no-static-date': 'off',
+    '@xtrctio/disallow-date/no-new-date': 'off'
+  }
 };
