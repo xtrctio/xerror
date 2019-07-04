@@ -21,13 +21,13 @@ const throwsWithHttpError = () => { throw new XError('boom', XError.HTTP_STATUS.
 const throwsWithData = () => { throw new XError('boom', undefined, {foo: 'bar'}); };
 ```
 
-<a name="XError"></a>
+<a name="RError"></a>
 
-## XError
+## RError
 **Kind**: global class  
-<a name="new_XError_new"></a>
+<a name="new_RError_new"></a>
 
-### new XError(message, [code], [data])
+### new RError(message, [code], [data])
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
