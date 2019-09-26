@@ -44,7 +44,7 @@
   "homepage": "https://github.com/roleup/rerror#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "fixpack && npm run docs && LIST=`git diff-index --cached --name-only HEAD | grep '.*\\.js' | grep -v json`; if [ \"$LIST\" ]; then npm run lint && git add $LIST; fi"
+      "pre-commit": "fixpack && npm run docs && LIST=`git diff-index --cached --name-only HEAD | grep '.*\\.ts' | grep -v json`; if [ \"$LIST\" ]; then npm run lint && git add $LIST; fi"
     }
   },
   "keywords": [
