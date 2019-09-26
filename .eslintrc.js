@@ -11,6 +11,7 @@ module.exports = {
     }
   },
   rules: {
+    'no-useless-constructor': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/camelcase': 'warn',
     '@xtrctio/disallow-date/no-static-date': 'off',
